@@ -26,7 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-O padrão de commits utilizado deverá ser o de commits semânticos, e deverão ser em inglês, segue uma lista de tipos do padrão de commits semâmticos:
+- O padrão de commits utilizado deverá ser o de commits semânticos, e deverão ser em inglês, segue uma lista de tipos do padrão de commits semâmticos:
+```
 test: indica qualquer tipo de criação ou alteração de códigos de teste. 
     - Exemplo: Criação de testes unitários.
 feat: indica o desenvolvimento de uma nova feature ao projeto. 
@@ -48,4 +49,6 @@ perf: indica uma alteração que melhorou a performance do sistema.
 ci: utilizada para mudanças nos arquivos de configuração de CI.
     - Exemplo: Circle, Travis, BrowserStack, etc.
 revert: indica a reverão de um commit anterior.
-O padrão de variáveis será camel case (camelCase) e todas deverão ser em inglês. =======
+```
+- O padrão de variáveis será camel case (camelCase) e todas deverão ser em inglês.
+=======
