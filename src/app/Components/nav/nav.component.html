@@ -1,17 +1,40 @@
-<nav>
-	<ul>
-		<li>
-			<a routerLink="/Home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-		</li>
-		<li>
-			<a routerLink="/RegistrarReceita" routerLinkActive="active" ariaCurrentWhenActive="page"
-				>RegistrarReceita</a
+
+	<mat-toolbar class="fixed">
+		<div class="flex ml-3 justify-center items-center space-x-6">
+			<a
+				routerLink="/Home"
+				routerLinkActive="active"
+				ariaCurrentWhenActive="page"
+				class="font-bold text-xl"
+				>Home</a
 			>
-		</li>
-		<li>
-			<a routerLink="/ListaReceita" routerLinkActive="active" ariaCurrentWhenActive="page"
-				>ListaReceita</a
+			<a
+				routerLink="/RegistrarReceita"
+				routerLinkActive="active"
+				ariaCurrentWhenActive="page"
+				class="font-bold text-xl"
+				>Registrar Receita</a
 			>
-		</li>
-	</ul>
-</nav>
+			<a
+				routerLink="/ListaReceita"
+				routerLinkActive="active"
+				ariaCurrentWhenActive="page"
+				class="font-bold text-xl"
+				>Lista de Receitas</a
+			>
+			<a
+				routerLink="/Login"
+				routerLinkActive="active"
+				ariaCurrentWhenActive="page"
+				class="font-bold text-xl"
+				>Login</a
+			>
+			<a
+				routerLink="/Register"
+				routerLinkActive="active"
+				ariaCurrentWhenActive="page"
+				class="font-bold text-xl"
+				>Register</a
+			>
+		</div>
+	</mat-toolbar>

@@ -1,13 +1,15 @@
 import { RouterModule, Routes } from '@angular/router';
-import { LoginRegisterComponent } from './Pages/login-register/login-register.component';
+import { LoginComponent } from './Pages/login/login.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { RecipeRegistrationComponent } from './Pages/recipe-registration/recipe-registration.component';
 import { RecipeListingComponent } from './Pages/recipe-listing/recipe-listing.component';
+import { RegisterComponent } from './Pages/register/register.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'Login', component: LoginRegisterComponent },
-    { path: 'Home', component: HomeComponent },
-    { path: 'RegistrarReceita', component: RecipeRegistrationComponent },
-    { path: 'ListaReceita', component: RecipeListingComponent }
+	{ path: '**', component: LoginComponent, title: 'Login1' },
+	{ path: 'Home', component: HomeComponent, title: 'Home' },
+	{ path: 'Login', component: LoginComponent, title: 'Login' },
+	{ path: 'Register', component: RegisterComponent, title: 'Registro de Usuário' },
+	{ path: 'RegistrarReceita', component: RecipeRegistrationComponent, title: 'Registrar Receita' },
+	{ path: 'ListaReceita', component: RecipeListingComponent, title: 'Lista de Receitas' }
 ];
