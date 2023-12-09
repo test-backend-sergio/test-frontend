@@ -21,7 +21,7 @@ export class LoginComponent {
 		];
 		const data = { email: dataEmail['value'], password: dataPass['value'] };
 		//  console.log(dataEmail['value'], dataPass['value']);
-		this.http.PostDataLogin(data);
+		this.http.postDataLogin(data);
 		console.log('Login efetuado com sucesso!');
 		console.log(data);
 		if (data) {

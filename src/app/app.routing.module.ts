@@ -6,10 +6,10 @@ import { RecipeListingComponent } from './Pages/recipe-listing/recipe-listing.co
 import { RegisterComponent } from './Pages/register/register.component';
 
 export const routes: Routes = [
-	{ path: '', component: LoginComponent, title: 'Login1' },
+	{ path: '', component: HomeComponent, title: 'Home', pathMatch: 'full' },
 	{ path: 'Home', component: HomeComponent, title: 'Home' },
 	{ path: 'Login', component: LoginComponent, title: 'Login' },
 	{ path: 'Register', component: RegisterComponent, title: 'Registro de Usuário' },
-	{ path: 'RegistrarReceita', component: RecipeRegistrationComponent, title: 'Registrar Receita' },
+	{ path: 'RegistrarReceita', component: RecipeRegistrationComponent, title: 'Registrar Receita',  },
 	{ path: 'ListaReceita', component: RecipeListingComponent, title: 'Lista de Receitas' }
 ];

@@ -1,0 +1,14 @@
+<div class="container mx-auto">
+	<h1 class="text-2xl font-bold mb-4">Receitas</h1>
+	<div *ngFor="let recipe of recipes" class="bg-white shadow-md rounded p-4 mb-4">
+		<h2 class="text-xl font-semibold mb-2">{{ recipe.name }}</h2>
+		<div class="mb-2">
+			<span class="font-semibold">Ingredientes:</span>
+			<p>{{ recipe.ingredients }}</p>
+		</div>
+		<div>
+			<span class="font-semibold">Preparação:</span>
+			<p>{{ recipe.preparation }}</p>
+		</div>
+	</div>
+</div>

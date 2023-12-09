@@ -9,23 +9,32 @@ export class HttpService {
 
 	constructor(private http: HttpClient) {}
 
-	GetData() {
+	getData() {
 		return this.http.get(this.url);
 	}
 
-	// PostData(data: any){
-	//   return this.http.post(this.url, data);
-	// }
-
-	PostDataLogin(data: any) {
+	postDataLogin(data: any) {
 		return this.http.post(`${this.url}/login`, data, { responseType: 'text' }).subscribe((data) => {
 			console.log(data);
 		});
 	}
 
-	PostDataRegister(data: any) {
+	postDataRegister(data: any) {
 		return this.http.post(`${this.url}/user`, data, { responseType: 'text' }).subscribe((data) => {
 			console.log(data);
 		});
 	}
+
+  petDataRecipe(data: any) {
+    return this.http.get(`${this.url}/recipe`, data);
+  }
+
+  postDataRecipe(data: any) {
+    return this.http.post(`${this.url}/recipe`, data, { responseType: 'text' }).subscribe((data) => {
+      console.log(data);
+    });
+  }
+  getDataRecipe(data: any) {
+    return this.http.get(`${this.url}/recipe`, data);
+  }
 }

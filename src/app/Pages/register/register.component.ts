@@ -20,7 +20,7 @@ export class RegisterComponent {
 		];
 		const data = { email: dataEmail['value'], password: dataPass['value'] };
 		//  console.log(dataEmail['value'], dataPass['value']);
-		this.http.PostDataRegister(data);
+		this.http.postDataRegister(data);
 		console.log('Registro enviado!!');
 		console.log(data);
 	}
