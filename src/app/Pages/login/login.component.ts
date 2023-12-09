@@ -21,9 +21,11 @@ export class LoginComponent {
 		];
 		const data = { email: dataEmail['value'], password: dataPass['value'] };
 		//  console.log(dataEmail['value'], dataPass['value']);
-		this.http.PostData(data);
-    console.log('mensagem enviada');
-    console.log(data);
-
+		this.http.PostDataLogin(data);
+		console.log('Login efetuado com sucesso!');
+		console.log(data);
+		if (data) {
+			window.location.href = 'http://localhost:4200/Home';
+		}
 	}
 }

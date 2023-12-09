@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 	providedIn: 'root'
 })
 export class HttpService {
-	private url = 'http://localhost:4000/user';
+	private url = 'http://localhost:4000';
 
 	constructor(private http: HttpClient) {}
 
@@ -17,8 +17,14 @@ export class HttpService {
 	//   return this.http.post(this.url, data);
 	// }
 
-	PostData(data: any) {
-		return this.http.post(this.url, data, { responseType: 'text' }).subscribe((data) => {
+	PostDataLogin(data: any) {
+		return this.http.post(`${this.url}/login`, data, { responseType: 'text' }).subscribe((data) => {
+			console.log(data);
+		});
+	}
+
+	PostDataRegister(data: any) {
+		return this.http.post(`${this.url}/user`, data, { responseType: 'text' }).subscribe((data) => {
 			console.log(data);
 		});
 	}

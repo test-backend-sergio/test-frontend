@@ -6,7 +6,7 @@ import { RecipeListingComponent } from './Pages/recipe-listing/recipe-listing.co
 import { RegisterComponent } from './Pages/register/register.component';
 
 export const routes: Routes = [
-	{ path: '**', component: LoginComponent, title: 'Login1' },
+	{ path: '', component: LoginComponent, title: 'Login1' },
 	{ path: 'Home', component: HomeComponent, title: 'Home' },
 	{ path: 'Login', component: LoginComponent, title: 'Login' },
 	{ path: 'Register', component: RegisterComponent, title: 'Registro de Usuário' },
