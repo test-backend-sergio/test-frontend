@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { HttpService } from '../../Services/http-client.service';
+import { NavComponent } from "../../Components/nav/nav.component";
 
 @Component({
-	selector: 'app-register',
-	standalone: true,
-	imports: [],
-	templateUrl: './register.component.html',
-	styleUrl: './register.component.css'
+    selector: 'app-register',
+    standalone: true,
+    templateUrl: './register.component.html',
+    styleUrl: './register.component.css',
+    imports: [NavComponent]
 })
 export class RegisterComponent {
 	email: string = '';
@@ -19,9 +20,14 @@ export class RegisterComponent {
 			document.getElementById('password') as HTMLFormElement
 		];
 		const data = { email: dataEmail['value'], password: dataPass['value'] };
-		//  console.log(dataEmail['value'], dataPass['value']);
 		this.http.postDataRegister(data);
 		console.log('Registro enviado!!');
-		console.log(data);
+
+		if (data) {
+		  window.location.href = 'http://localhost:4200/Login';
+		} else {
+		  console.log('Erro ao enviar registro!');
+		}
+
 	}
 }
