@@ -1,8 +1,8 @@
-interface IRecipes {
-	id: number;
-	namerRecipes: string;
-	Ingredients: string;
-	PreparationMode: string;
-	linkImage?: string;
-	type: string;
+export interface IRecipes {
+  id?: number;
+  name: string;
+  ingredients: string;
+  preparation: string;
+  imageUrl?: string;
 }
+
