@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavComponent } from '../../Components/nav/nav.component';
 import { HttpService } from '../../Services/http-client.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {} from '../../Models/register';
+import { HttpErrorResponse } from '@angular/common/http';
 @Component({
 	selector: 'app-login',
 	standalone: true,
@@ -12,19 +14,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class LoginComponent {
 	email: string = '';
 	password: string = '';
-	constructor(private http: HttpService) {}
 
-	getData() {
+	constructor(private http: HttpService) {}
+	async getData() {
 		const [dataEmail, dataPass] = [
 			document.getElementById('email') as HTMLFormElement,
 			document.getElementById('password') as HTMLFormElement
 		];
-		const data = { email: dataEmail['value'], password: dataPass['value'] };
-		//  console.log(dataEmail['value'], dataPass['value']);
+
+		if (dataEmail['value'] == '' || dataPass['value'] == '') {
+			alert('Preencha todos os campos!');
+			return;
+		}
+		const data: any = { email: dataEmail['value'], password: dataPass['value'] };
 		this.http.postDataLogin(data);
-		console.log('Login efetuado com sucesso!');
-		console.log(data);
-		if (data) {
+		const token = localStorage.getItem('token');
+		if (token != null) {
 			window.location.href = 'http://localhost:4200/Home';
 		}
 	}
